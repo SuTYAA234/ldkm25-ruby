@@ -4,115 +4,160 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PyLearn — Pelatihan Python Dasar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="desain.css" />
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <header>
-    <nav>
-      <a href="#hero">Home</a>
-      <a href="#materi">Materi</a>
-      <a href="#latihan">Latihan</a>
-      <a href="#team">Tim</a>
-      <a href="#footer">Kontak</a>
+    <nav class="container">
+      <div class="logo">PyLearn.</div>
+      <div class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#about">Tentang</a>
+        <a href="#materi">Materi</a>
+        <a href="#latihan">Latihan</a>
+        <a href="#team">Tim</a>
+      </div>
     </nav>
   </header>
 
-
-
-  <!-- HERO -->
   <section id="hero">
-    <h1>  Belajar Python Dasar Secara Interaktif</h1>
-    <p>Cocok untuk pemula, mahasiswa, dan pelajar</p>
-    <a href="#latihan" class="btn">Coba Latihan Sekarang</a>
+    <div class="container hero-content">
+      <h1>Belajar <span class="highlight">Python</span> Dasar Secara Interaktif</h1>
+      <p>Media pembelajaran modern cocok untuk pemula, mahasiswa, dan pelajar.</p>
+      <a href="#latihan" class="btn btn-primary">Coba Latihan Sekarang</a>
+    </div>
   </section>
 
-   <!-- latar belakang -->
-  <section>
-    <h1><b> <i>APA ITU PYTHON?</i> </b> </h1>
-    <p>Website PyLearn merupakan website satu halaman (landing page) yang terdiri dari beberapa bagian utama, yaitu navbar, hero section, materi Python dasar, latihan interaktif, profil tim, dan footer. Website ini dibangun menggunakan HTML sebagai struktur halaman, CSS sebagai pengatur tampilan, dan JavaScript sebagai pengelola interaksi pengguna.
-
-Latihan interaktif pada website ini mensimulasikan konsep pemrograman Python, seperti operasi penjumlahan, dengan memanfaatkan logika JavaScript. Hal ini bertujuan agar pengguna dapat memahami konsep dasar pemrograman meskipun Python tidak dijalankan secara langsung di sisi server.
-    </p>
-  </section>
-
-  <!-- MATERI -->
-  <section id="materi">
-    <h2>Materi Dasar Python</h2>
-    <ul>
-      <li>Variabel & Tipe Data</li>
-      <li>Input & Output</li>
-      <li>Percabangan (if-else)</li>
-      <li>Perulangan (for / while)</li>
-    </ul>
-    <pre><code>nama = input("Nama: ")
-print("Halo", nama)</code></pre>
-  </section>
-
-  <!-- LATIHAN INTERAKTIF -->
-  <section id="latihan">
-    <h2>Latihan Interaktif</h2>
-    <p>Masukkan dua angka untuk simulasi kode Python (penjumlahan)</p>
-
-    <input type="number" id="angka1" placeholder="Angka pertama" />
-    <input type="number" id="angka2" placeholder="Angka kedua" />
-    <button onclick="hitung()">Hitung</button>
-
-    <div id="hasil"></div>
-  </section>
-
-  <!-- BUAT BAGIAN NAMA TEAM -->
-  <section id="team">
-    <h2>Tim Kami</h2>
-      <div class="card">
-        <!-- <img src="foto/" /> -->
-        <h4>Muhammad Rivan Surya</h4>
-        <p>I.2510393</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/80" />
-        <h4>Intan Khalimatu Sa'diyah </h4>
-        <p>I.2510261</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/80" />
-        <h4>Jalal </h4>
-        <p>I.2510109</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/80" />
-        <h4>Alfida Khaira Annas </h4>
-        <p>I.2510002</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/80" />
-        <h4>Muhamad Abdullah Farhan</h4>
-        <p>I.2510738</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/80" />
-        <h4>⁠Muhammad Zibril Tafa Tabia</h4>
-        <p>I.2510056</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/80" />
-        <h4>Muhammad Ridho Ramadhan</h4>
-        <p>I.2510184</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/80" />
-        <h4>Aji Cahya Mustaqim</h4>
-        <p>I.2510161</p>
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">Apa itu PyLearn?</h2>
+      <div class="about-content">
+        <p>
+          Website PyLearn merupakan website satu halaman (landing page) yang terdiri dari beberapa bagian utama.
+          Website ini dibangun menggunakan <strong>HTML</strong> sebagai struktur halaman, <strong>CSS</strong> sebagai pengatur tampilan, dan <strong>JavaScript</strong> sebagai pengelola interaksi pengguna.
+        </p>
+        <p>
+          Latihan interaktif pada website ini mensimulasikan konsep pemrograman Python, seperti operasi penjumlahan, dengan memanfaatkan logika JavaScript. Tujuannya agar pengguna dapat memahami konsep dasar pemrograman dengan mudah.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <section id="materi" class="bg-light">
+    <div class="container">
+      <h2 class="section-title">Materi Dasar</h2>
+      <div class="materi-grid">
+        <div class="materi-card">
+          <h3>Variabel & Tipe Data</h3>
+          <p>Pelajari cara menyimpan data dalam variabel.</p>
+        </div>
+        <div class="materi-card">
+          <h3>Input & Output</h3>
+          <p>Interaksi program dengan pengguna.</p>
+        </div>
+        <div class="materi-card">
+          <h3>Percabangan</h3>
+          <p>Logika If-Else untuk pengambilan keputusan.</p>
+        </div>
+        <div class="materi-card">
+          <h3>Perulangan</h3>
+          <p>Looping menggunakan For dan While.</p>
+        </div>
+      </div>
+
+      <div class="code-preview">
+        <h4>Contoh Kode Python:</h4>
+        <pre><code>nama = input("Nama: ")
+print(f"Halo, {nama} selamat belajar!")</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section id="latihan">
+    <div class="container">
+      <h2 class="section-title">Latihan Interaktif</h2>
+      <p class="subtitle">Simulasi penjumlahan sederhana ala Python</p>
+      
+      <div class="calculator-box">
+        <div class="input-group">
+          <input type="number" id="angka1" placeholder="Masukkan Angka 1" />
+          <span class="operator">+</span>
+          <input type="number" id="angka2" placeholder="Masukkan Angka 2" />
+        </div>
+        <button onclick="hitung()" class="btn btn-accent">Jalankan Kode</button>
+        
+        <div id="hasil-container">
+          Hasil: <span id="hasil">...</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="team" class="bg-light">
+    <div class="container">
+      <h2 class="section-title">Tim Kami</h2>
+      <div class="team-wrapper">
+        <div class="card">
+          <img src="foto/MUKA.jpg">
+          <h4>Muhammad Rivan Surya</h4>
+          <p>I.2510393</p>
+        </div>
+        <div class="card">
+          <img src="foto/SSA.jpg" >
+          <h4>Intan Khalimatu Sa'diyah</h4>
+          <p>I.2510261</p>
+        </div>
+        <div class="card">
+          <img src="foto/SSA.jpg" >
+          <h4>Jalal</h4>
+          <p>I.2510109</p>
+        </div>
+        <div class="card">
+          <img src="foto/SSA.jpg" >
+          <h4>Alfida Khaira Annas</h4>
+          <p>I.2510002</p>
+        </div>
+        <div class="card">
+          <img src="foto/SSA.jpg" >
+          <h4>Muhamad Abdullah Farhan</h4>
+          <p>I.2510738</p>
+        </div>
+        <div class="card">
+          <img src="foto/SSA.jpg" >
+          <h4>Muhammad Zibril Tafa Tabia</h4>
+          <p>I.2510056</p>
+        </div>
+        <div class="card">
+          <img src="foto/SSA.jpg" >
+          <h4>Muhammad Ridho Ramadhan</h4>
+          <p>I.2510184</p>
+        </div>
+        <div class="card">
+          <img src="foto/SSA.jpg" >
+          <h4>Aji Cahya Mustaqim</h4>
+          <p>I.2510161</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer id="footer">
-    <!-- <p>Email: pylearn@email.com</p> -->
-    <p>&copy; 2025 Ruby</p>
+    <div class="container">
+      <p>&copy; 2025 <strong>Ruby</strong>.</p>
+    </div>
   </footer>
+
+<div id="modalTeam" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <img id="modalImg" src="" alt="Foto Tim" />
+    <h3 id="modalName">Nama Anggota</h3>
+    <p id="modalNim">NIM</p>
+  </div>
+</div>
 
   <script src="script.js"></script>
 </body>
