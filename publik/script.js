@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Ambil elemen tombol sosmed baru
     const btnIg = document.getElementById("btnIg");
     const btnWa = document.getElementById("btnWa");
-    
     const closeBtn = document.querySelector(".close-btn");
     const teamCards = document.querySelectorAll(".card");
 
