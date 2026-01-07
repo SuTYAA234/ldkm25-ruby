@@ -1,24 +1,14 @@
-/* =========================================
-   1. VARIABLES & RESET
-   ========================================= */
 :root {
-  /* --- Tema Warna: Ruby Red --- */
-  --primary-color: #d70040;  /* Merah Ruby */
-  --primary-dark: #9e0030;   /* Merah Gelap (Hover) */
-  --secondary-color: #ffc107; /* Kuning Emas (Aksen) */
-
-  /* --- Warna Netral --- */
+  --primary-color: #d70040;
+  --primary-dark: #9e0030;
+  --secondary-color: #ffc107;
   --dark-color: #1a1a1a;
-  --light-bg: #fff0f3;       /* Background pink sangat muda */
+  --light-bg: #fff0f3;
   --white: #ffffff;
   --text-color: #333333;
   --gray: #64748b;
-  
-  /* --- Shadows --- */
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-
-  /* --- Typography --- */
   --font-main: 'Plus Jakarta Sans', sans-serif;
 }
 
@@ -53,11 +43,8 @@ a { text-decoration: none; }
   padding: 80px 0;
 }
 
-/* =========================================
-   2. NAVBAR / HEADER
-   ========================================= */
 header {
-  background-color: rgba(26, 26, 26, 0.95); /* Dark transparan */
+  background-color: rgba(26, 26, 26, 0.95);
   backdrop-filter: blur(10px);
   padding: 1rem 0;
   position: sticky;
@@ -97,16 +84,13 @@ header {
   margin-left: 30px;
 }
 
-/* =========================================
-   3. HERO SECTION
-   ========================================= */
 #hero {
   background: linear-gradient(135deg, var(--dark-color) 0%, var(--primary-color) 100%);
   min-height: 100vh;
   display: flex;
   align-items: center;
   color: var(--white);
-  padding-top: 80px; /* Kompensasi navbar fixed */
+  padding-top: 80px;
 }
 
 .hero-wrapper {
@@ -136,11 +120,11 @@ header {
 
 .gradient-text {
   background: linear-gradient(to right, #ff8fa3, #fff);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Tombol */
 .btn {
   display: inline-block;
   padding: 12px 30px;
@@ -151,7 +135,7 @@ header {
 }
 
 .btn-primary {
-  background-color: var(--secondary-color); /* Kuning di Hero agar kontras */
+  background-color: var(--secondary-color);
   color: var(--dark-color);
   border: 2px solid var(--secondary-color);
 }
@@ -175,7 +159,6 @@ header {
 
 .hero-buttons { margin-top: 20px; }
 
-/* Ilustrasi Kanan Hero */
 .hero-image {
   flex: 1;
   position: relative;
@@ -183,7 +166,6 @@ header {
   justify-content: center;
 }
 
-/* Animasi Code Floating */
 .code-card-float {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -209,9 +191,6 @@ header {
   50% { transform: translateY(-20px); }
 }
 
-/* =========================================
-   4. LATAR BELAKANG WEBSITE (Bg Story)
-   ========================================= */
 #bg-website {
   background-color: var(--white);
   position: relative;
@@ -253,9 +232,6 @@ header {
 .story-card:hover { transform: rotate(0deg) scale(1.02); }
 .story-card i { font-size: 4rem; margin-bottom: 20px; color: var(--secondary-color); }
 
-/* =========================================
-   5. ABOUT / PYTHON INTRO
-   ========================================= */
 #about { background-color: var(--white); }
 
 .intro-grid {
@@ -315,7 +291,6 @@ header {
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-
 .bg-gray { background-color: #f8fafc; }
 
 .section-title {
@@ -369,7 +344,6 @@ header {
   color: var(--primary-color) !important;
 }
 
-/* Code Preview Window */
 .code-window {
   background: #1e293b;
   border-radius: 12px;
@@ -389,10 +363,7 @@ header {
 .window-body { padding: 25px; color: #e2e8f0; font-family: monospace; }
 .copy-btn { background: none; border: none; color: #94a3b8; cursor: pointer; }
 
-/* =========================================
-   7. LATIHAN (COLAB STYLE)
-   ========================================= */
-.bg-dark-colab { background-color: #111; } /* Lebih gelap */
+.bg-dark-colab { background-color: #111; }
 
 .colab-container {
   max-width: 800px; margin: 0 auto;
@@ -432,18 +403,14 @@ header {
 .result-text { color: #98c379; font-weight: bold; }
 
 #latihan .section-header h2 {
-  color: var(--primary-color) !important; /* Merah Ruby */
-  text-shadow: 0 0 20px rgba(215, 0, 64, 0.4); /* Efek cahaya redup */
+  color: var(--primary-color) !important;
+  text-shadow: 0 0 20px rgba(215, 0, 64, 0.4);
 }
 
-/* Pastikan deskripsi di bawahnya tetap terlihat (putih/abu terang) */
 #latihan .section-header p {
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
-/* =========================================
-   8. TEAM SECTION (RUBY STYLE)
-   ========================================= */
 .bg-light { background-color: var(--light-bg); }
 
 .team-wrapper {
@@ -452,13 +419,8 @@ header {
 
 .card {
   background: var(--white);
-  
-  /* UBAH DARI 280px MENJADI 320px AGAR LEBIH LEBAR */
   width: 320px; 
-  
-  /* UBAH PADDING KIRI-KANAN JADI 15px (BIAR SPACE TEKS LEBIH LUAS) */
   padding: 30px 15px;
-  
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   display: flex; flex-direction: column; align-items: center;
@@ -468,7 +430,6 @@ header {
   border: 1px solid transparent;
 }
 
-/* Hover Effect: Border Kartu & Shadow Merah */
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(215, 0, 64, 0.15);
@@ -479,7 +440,6 @@ header {
   width: 100px; height: 100px;
   border-radius: 50%; object-fit: cover;
   margin-bottom: 15px;
-  /* Bingkai Merah Ruby */
   border: 3px solid var(--primary-color);
   padding: 3px; background-color: white;
 }
@@ -490,17 +450,12 @@ header {
   color: var(--dark-color); 
   font-weight: 700;
   transition: color 0.3s;
-
-  /* TAMBAHKAN BARIS INI AGAR TULISAN TIDAK SALING TIMPA */
   line-height: 1.5; 
 }
 .card:hover h4 { color: var(--primary-color); }
 
 .card p { font-size: 0.9rem; color: var(--primary-color); font-weight: 600; }
 
-/* =========================================
-   9. POPUP MODAL
-   ========================================= */
 .modal {
   display: none; position: fixed; z-index: 9999;
   left: 0; top: 0; width: 100%; height: 100%;
@@ -536,7 +491,6 @@ header {
 }
 .close-btn:hover { color: var(--primary-color); }
 
-/* Tombol Sosmed di Modal */
 .social-links { margin-top: 25px; display: flex; justify-content: center; gap: 15px; }
 .btn-sosmed {
   text-decoration: none; padding: 10px 20px; border-radius: 8px;
@@ -553,9 +507,6 @@ header {
   box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
 }
 
-/* =========================================
-   10. FOOTER
-   ========================================= */
 footer {
   background: #111; color: #94a3b8; padding: 60px 0; font-size: 0.95rem;
 }
@@ -581,158 +532,32 @@ footer {
 }
 .github-btn:hover { background-color: var(--primary-color); }
 
-/* =========================================
-   11. RESPONSIVE / MOBILE (OPTIMALISASI HP)
-   ========================================= */
 @media (max-width: 960px) {
 
-  /* --- A. PENGATURAN UMUM --- */
   .container {
-    width: 90%; /* Memberi jarak kiri-kanan lebih lega */
+    width: 90%; 
   }
   
   .section-padding {
-    padding: 50px 0; /* Kurangi jarak antar section agar tidak terlalu jauh di HP */
+    padding: 60px 0; 
   }
 
-  /* --- B. HEADER & NAVBAR --- */
   .nav-links { 
-    display: none; /* Sembunyikan menu teks (Home, Materi, dll) */
-  }
-
-  .nav-container {
-    padding: 0 10px; /* Jarak aman pinggir layar */
-  }
-
-  /* Perbaikan Tombol di Header agar tidak menabrak Logo */
-  .nav-btn {
-    margin-left: 0;
-    font-size: 0.8rem;      /* Perkecil tulisan tombol */
-    padding: 8px 16px !important; /* Perkecil ukuran tombol */
-    width: auto !important; /* PENTING: Mencegah tombol melebar full-screen */
-  }
-
-  /* --- C. HERO SECTION --- */
-  #hero {
-    padding-top: 40px; /* Kurangi jarak atas */
-    min-height: auto;  /* Hilangkan tinggi minimum layar */
-    padding-bottom: 60px;
-  }
-  
-  .hero-wrapper { 
-    flex-direction: column-reverse; /* Gambar di Atas, Teks di Bawah */
-    text-align: center; 
-    gap: 30px;
-  }
-  
-  .hero-content h1 { 
-    font-size: 2.2rem; /* Perkecil judul utama */
-    line-height: 1.3;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero-buttons { 
-    display: flex; 
-    flex-direction: column; /* Tombol disusun ke bawah */
-    gap: 15px; 
-    padding: 0 10px;
-  }
-  
-  /* Tombol Hero jadi lebar penuh agar mudah ditekan jempol */
-  .hero-buttons .btn { 
-    width: 100%; 
-    margin: 0; 
-  }
-
-  .hero-image {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  /* --- D. BAGIAN STORY & INTRO --- */
-  .bg-story-wrapper { 
-    flex-direction: column; 
-    gap: 40px;
-  }
-  
-  .story-card { 
-    transform: rotate(0); /* Hilangkan kemiringan kartu di HP */
-    width: 100%;
-  }
-
-  .intro-grid {
-    grid-template-columns: 1fr; /* Ubah jadi 1 kolom */
-    gap: 40px;
-  }
-
-  /* --- E. MATERI & TEAM --- */
-  .materi-grid, .team-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .materi-card, .card {
-    width: 100%;        /* Lebar penuh */
-    max-width: 350px;   /* Tapi jangan lebih lebar dari 350px */
-  }
-
-  /* --- F. FOOTER --- */
-  .footer-container { 
-    grid-template-columns: 1fr; 
-    gap: 40px; 
-    text-align: center;
-  }
-
-  .address-link {
-    justify-content: center; /* Tengahkan link alamat */
-  }
-
-  /* --- G. MODAL POPUP --- */
-  .modal-content {
-    width: 95%; /* Modal hampir memenuhi layar HP */
-    padding: 25px 15px;
-  }
-}
-
-
-/* =========================================
-   12. RESPONSIVE / MOBILE VERSION
-   ========================================= */
-@media (max-width: 960px) {
-
-  /* --- A. PENGATURAN UMUM MOBILE --- */
-  .container {
-    width: 90%; /* Memberi jarak kiri-kanan agar tidak mepet */
-  }
-  
-  .section-padding {
-    padding: 60px 0; /* Kurangi jarak vertikal agar tidak terlalu kosong */
-  }
-
-  /* --- B. HEADER & NAVBAR --- */
-  .nav-links { 
-    display: none; /* Sembunyikan menu teks (Home, Materi, dll) di HP */
+    display: none; 
   }
 
   .nav-container {
     padding: 0 15px;
-    justify-content: space-between; /* Logo kiri, Tombol kanan */
+    justify-content: space-between; 
   }
-
-  /* Tombol Header (Mulai Belajar) */
+  
   .nav-btn {
     margin-left: 0;
     font-size: 0.8rem;      
     padding: 8px 16px !important; 
-    width: auto !important; /* PENTING: Agar tombol tidak melebar full layar */
+    width: auto !important; 
   }
 
-  /* --- C. HERO SECTION (HALAMAN UTAMA) --- */
   #hero {
     padding-top: 40px; 
     min-height: auto; 
@@ -740,13 +565,13 @@ footer {
   }
   
   .hero-wrapper { 
-    flex-direction: column-reverse; /* Gambar di atas, Teks di bawah */
+    flex-direction: column-reverse;
     text-align: center; 
     gap: 30px;
   }
   
   .hero-content h1 { 
-    font-size: 2.2rem; /* Kecilkan font judul */
+    font-size: 2.2rem; 
     line-height: 1.3;
   }
 
@@ -757,11 +582,10 @@ footer {
   
   .hero-buttons { 
     display: flex; 
-    flex-direction: column; /* Tombol disusun ke bawah */
+    flex-direction: column; 
     gap: 15px; 
   }
   
-  /* Tombol di Hero jadi lebar penuh agar mudah ditekan jempol */
   .hero-buttons .btn { 
     width: 100%; 
     margin: 0; 
@@ -770,10 +594,9 @@ footer {
   .hero-image {
     width: 100%;
     margin-bottom: 10px;
-    zoom: 0.8; /* Perkecil sedikit ilustrasi coding */
+    zoom: 0.8; 
   }
-
-  /* --- D. BAGIAN STORY (TENTANG PYLEARN) --- */
+  
   .bg-story-wrapper { 
     flex-direction: column; 
     gap: 40px;
@@ -784,38 +607,34 @@ footer {
   }
   
   .story-card { 
-    transform: rotate(0); /* Hilangkan kemiringan kartu agar rapi */
+    transform: rotate(0); 
     width: 100%;
     margin-top: 20px;
   }
 
-  /* --- E. INTRO & MATERI --- */
   .intro-grid {
-    grid-template-columns: 1fr; /* Ubah jadi 1 kolom (tumpuk ke bawah) */
+    grid-template-columns: 1fr; 
     gap: 40px;
   }
 
   .materi-grid {
-    grid-template-columns: 1fr; /* Kartu materi jadi 1 kolom ke bawah */
+    grid-template-columns: 1fr; 
   }
 
-  /* Code Window Preview */
   .code-window {
     width: 100%;
-    font-size: 0.8rem; /* Kecilkan teks koding di preview */
+    font-size: 0.8rem; 
   }
-
-  /* --- F. LATIHAN (SIMULATOR) --- */
+  
   .colab-cell {
-    flex-direction: column; /* Tombol run di atas, kode di bawah */
+    flex-direction: column; 
     padding: 15px;
   }
   
   .colab-input {
-    width: 100%; /* Input text memenuhi layar */
+    width: 100%; 
   }
-
-  /* --- G. TEAM SECTION --- */
+  
   .team-wrapper {
     flex-direction: column;
     align-items: center;
@@ -823,23 +642,21 @@ footer {
 
   .card {
     width: 100%;        
-    max-width: 350px;   /* Batasi lebar kartu */
+    max-width: 350px;   
   }
 
-  /* --- H. FOOTER --- */
   .footer-container { 
-    grid-template-columns: 1fr; /* Footer jadi 1 kolom */
+    grid-template-columns: 1fr; 
     gap: 40px; 
     text-align: center;
   }
 
   .address-link {
-    justify-content: center; /* Tengahkan link alamat */
-    text-align: left; /* Teks alamat tetap rata kiri tapi di tengah container */
+    justify-content: center; 
+    text-align: left; 
     display: inline-flex;
   }
 
-  /* --- I. MODAL POPUP --- */
   .modal-content {
     width: 90%;
     padding: 30px 20px;
